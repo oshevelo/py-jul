@@ -1,0 +1,2 @@
+django-jet==1.0.7
+rest_framework
