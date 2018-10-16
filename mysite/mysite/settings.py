@@ -34,7 +34,8 @@ INSTALLED_APPS = [
     'jet.dashboard',
     'jet',
     'rest_framework',
-    'polls.apps.PollsConfig',
+    'apps.polls.apps.PollsConfig',
+    'apps.auth.apps.AuthConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,11 +77,17 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
+#pyjul
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': 'localhost',
+        'NAME': 'pyjul',
+        'USER': 'ad6',
+        'PASSWORD': 'ad6',
+        'OPTIONS': {
+            'client_encoding': 'UTF8'
+        }
     }
 }
 
