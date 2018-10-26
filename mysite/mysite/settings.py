@@ -34,6 +34,10 @@ INSTALLED_APPS = [
     'jet.dashboard',
     'jet',
     'rest_framework',
+    'apps.info',
+    'apps.carts',
+    'apps.orders',
+    'apps.products',
     'apps.polls.apps.PollsConfig',
     'apps.auth.apps.AuthConfig',
     'django.contrib.admin',
@@ -129,3 +133,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'static/' 

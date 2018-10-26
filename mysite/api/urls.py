@@ -19,4 +19,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^polls/', include('apps.polls.api.urls')),
+    url(r'^info/', include('apps.info.api.urls')),
+    url(r'^products/', include('apps.products.api.urls')),
 ]

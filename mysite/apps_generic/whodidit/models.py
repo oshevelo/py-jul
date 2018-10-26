@@ -12,7 +12,8 @@ class WhoDidIt(models.Model):
     """
     created_on = models.DateTimeField(
         verbose_name="created on",
-        auto_now_add=True, editable=False
+        auto_now_add=True, editable=False,
+        null=True, blank=True
     )
     created_by = models.ForeignKey(
         verbose_name="created by",
@@ -22,7 +23,8 @@ class WhoDidIt(models.Model):
 
     updated_on = models.DateTimeField(
         verbose_name="updated on",
-        auto_now=True, editable=False
+        auto_now=True, editable=False,
+        null=True, blank=True
     )
     updated_by = models.ForeignKey(
         verbose_name="created by",
