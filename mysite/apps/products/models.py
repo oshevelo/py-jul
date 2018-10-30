@@ -15,8 +15,8 @@ class CatalogItem(WhoDidIt):
     )
 
 
-    perent = models.ForeignKey(
-        verbose_name="perent",
+    parent = models.ForeignKey(
+        verbose_name="parent",
         to='self', null=True, blank=True
     )
 

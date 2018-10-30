@@ -3,13 +3,12 @@ from django.http import Http404
 from django.http import HttpResponse
 from apps.products.models import Product
 from rest_framework import generics
-from .serializers import ProductSerializer
-
+from .serializers import ProductSerializer, ProductListSerializer
+from rest_framework.pagination import LimitOffsetPagination
 
 class ProductsList(generics.ListCreateAPIView):
     queryset = Product.objects.all()
-    serializer_class = ProductSerializer
-
+    serializer_class = ProductListSerializer
 
 class ProductDetails(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ProductSerializer
